@@ -1,22 +1,17 @@
-import React, { Component } from 'react';
+import React from 'react';
 //import '../style/JS_FILE'
-import { BrowserRouter as Router, Link } from "react-router-dom"
 import User from './User';
 
-class Landing extends Component {
+function Landing(props) {
 
-    render() {
-        return (
-            <div>
-                <div id='landing'>
-                    <h2>Who's Watching?</h2>
-                    <div id="user-container">
-                        {this.props.users.map(u => <User key={u.name} user={u} updateUser={this.props.updateUser} />)}
-                    </div>
-                </div>
+    return (
+        <div id='landing'>
+            <h2>Who's Watching?</h2>
+            <div id="user-container">
+                {props.users.map(u => <User key={u.name} user={u} updateUser={props.updateUser} />)}
             </div>
-        )
-    }
+        </div>
+    )
 }
 
 export default Landing;

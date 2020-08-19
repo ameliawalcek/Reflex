@@ -2,23 +2,19 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom'
 // import '../style/JS_FILE'
 
-class Movie extends Component {
-    selectedMovie = () => {
-        this.props.selectedMovie(this.props.movie.id)
-    }
+function Movie(props) {
+    let { movie } = props
 
-    render() {
-        let movie = this.props.movie
-        return (
-            <div className="movie-container" style={{ backgroundImage: `url(${movie.img})`, backgroundSize: '100% 100%' }}>
+    const selectedMovie = () => props.selectedMovie(movie.id)
 
-                {this.props.rented ? <i className="fas fa-minus-circle" onClick={this.selectedMovie}></i>
-                    : <i className="fas fa-plus-circle" onClick={this.selectedMovie}></i>}
+    return (
+        <div className="movie-container" style={{ backgroundImage: `url(${movie.img})`, backgroundSize: '100% 100%' }}>
+            {props.rented ? <i className="fas fa-minus-circle" onClick={selectedMovie}></i>
+                : <i className="fas fa-plus-circle" onClick={selectedMovie}></i>}
 
-                <Link to={`/movie/${movie.id}`}><div className='more-info'>More Info</div></Link>
-            </div>
-        )
-    }
+            <Link to={`/movie/${movie.id}`}><div className='more-info'>More Info</div></Link>
+        </div>
+    )
 }
 
 export default Movie;

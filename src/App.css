@@ -1,8 +1,7 @@
 html, body { height: 100%; } 
 
 body {
-  margin: 0;
-  padding: 75px 30px 30px 30px;
+  margin: 75px 30px 30px 30px;
   background-color: black;
   font-family: 'Roboto', sans-serif;
   height: fit-content;

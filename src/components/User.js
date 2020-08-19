@@ -1,22 +1,19 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom'
-// import '../CSSFILE'
 
-class User extends Component {
+function User(props) {
+    let { user } = props
 
-    updateUser = () => {
-        this.props.updateUser(this.props.user.id)
+    const updateUser = () => {
+        props.updateUser(user.id)
     }
-    render() {
-        let user = this.props.user
 
-        return (
-            <Link to='/catalog'>
-                    <div className='user' onClick={this.updateUser} style={{ backgroundImage: `url(${user.img})`, backgroundSize: '100% 100%' }}>.</div>
-                    <div className='user-name'>{user.name}</div>
-            </Link>
-        )
-    }
+    return (
+        <Link to='/catalog'>
+            <div className='user' onClick={updateUser} style={{ backgroundImage: `url(${user.img})`, backgroundSize: '100% 100%' }}>.</div>
+            <div className='user-name'>{user.name}</div>
+        </Link>
+    )
 }
 
 export default User;
