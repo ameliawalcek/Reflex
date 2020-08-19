@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-//import '../style/JS_FILE'
-import { BrowserRouter as Router, Link } from "react-router-dom"
 import Movie from './Movie';
 
 class Catalog extends Component {
@@ -11,11 +9,9 @@ class Catalog extends Component {
         }
     }
 
-    getUser = () => {
-        return this.props.users.find(u => u.id === this.props.currentUserId)
-    }
+    getUser = () => this.props.users.find(u => u.id === this.props.currentUserId)
 
-    updateSearch = e => this.setState({ searchValue: e.target.value })
+    updateSearch = ({ target }) => this.setState({ searchValue: target.value })
 
     hasRentals = () => {
         let user = this.getUser()

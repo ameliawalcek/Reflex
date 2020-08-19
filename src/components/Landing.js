@@ -1,5 +1,4 @@
 import React from 'react';
-//import '../style/JS_FILE'
 import User from './User';
 
 function Landing(props) {
