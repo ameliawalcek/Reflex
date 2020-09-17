@@ -5,7 +5,7 @@ Movie rental fontend platform using TMDb API.
 ## Landing Page
 <img src="https://i.ibb.co/c1zdCGd/Home.jpg" alt="Home" border="0">
 
-## Cataloge Page
+## Cataloged Page
 <img src="https://i.ibb.co/C0Xyjc5/Catalog.jpg" alt="Catalog" border="0">
 <img src="https://i.ibb.co/Q8FV7yB/Movie-Search.jpg" alt="Movie-Search" border="0">
 
