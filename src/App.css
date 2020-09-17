@@ -12,6 +12,9 @@ body {
   width: auto;
 }
 
+h3{
+  color: white
+}
 i{
   color: rgb(255 255 255 / .5);
   cursor: pointer;
@@ -106,8 +109,8 @@ button{
 }
 
 .movie-container {
-  height: 400px;
-  width: 290px;
+  height: 450px;
+  width: 275px;
   display: inline-block;
   position: relative;
   margin: 15px;

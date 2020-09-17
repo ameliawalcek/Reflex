@@ -5,6 +5,7 @@ import Landing from './components/Landing';
 import Catalog from './components/Catalog';
 import MovieDetail from './components/MovieDetail';
 import axios from 'axios';
+require("dotenv").config()
 
 class App extends Component {
   constructor() {
@@ -22,7 +23,7 @@ class App extends Component {
   }
 
   getPopular() {
-    return axios.get('https://api.themoviedb.org/3/movie/popular?api_key=3a1b3fdc574beb3254257b752d27a3f7')
+    return axios.get(`https://api.themoviedb.org/3/movie/popular?api_key=${process.env.MOVIE_API_KEY}`)
   }
 
   async componentDidMount() {

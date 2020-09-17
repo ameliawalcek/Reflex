@@ -40,12 +40,13 @@ class Catalog extends Component {
     }
 
     displayMovies = movie => {
-        let rented = this.isRented(movie.id)
+        // let rented = this.isRented(movie.id)
         let title = movie.title.toLowerCase()
-
+        console.log(movie)
+        console.log(this.state.searchValue)
         return (
             title.includes(this.state.searchValue.toLowerCase())
-                ? <Movie rented={rented} currentUserId={this.props.currentUserId}
+                ? <Movie  currentUserId={this.props.currentUserId}
                     selectedMovie={this.props.selectedMovie} movie={movie} key={movie.id} />
                 : null
         )
@@ -68,12 +69,12 @@ class Catalog extends Component {
                 </div>
 
                 {this.hasRentals() ?
-                    <div>
+                    <div><br/><br/>
                         <h3>Rentals:</h3>
                         {rentals.map(r => this.displayMovies(r))}
                     </div> :
                     null}
-                <div>
+                <div><br/><br/>
                     <h3>Movies:</h3>
                     <div className="catalog-container">
                         {this.props.movies.map(m => this.displayMovies(m))}
