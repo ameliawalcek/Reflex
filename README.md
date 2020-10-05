@@ -1,6 +1,6 @@
 # Reflex
 
-Movie rental fontend platform using TMDb API. 
+Movie rental fontend platform using TMDb API, React, Axios, and CSS. 
 
 ## Landing Page
 <img src="https://i.ibb.co/c1zdCGd/Home.jpg" alt="Home" border="0">
